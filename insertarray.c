@@ -1,33 +1,25 @@
 #include<stdio.h>
 void main()
 {
-    int array;
-    int size;
-    int loc;
-    int num;
-    int i;
-    printf("Enter the size of the array :\n");
-    scanf("%d",&size);
+    int a[5],loc,num,i;
     printf("Enter the elements of the array :\n");
-    for (i=0; i<size; i++)
+    for (i=0;i<4;i++)
     {
-    printf("array %d :\n",i);
-    scanf("%d",&array[i]);
+    scanf("%d",&a[i]);
     }
     printf("Enter location of element to be inserted :\n");
     scanf("%d",&loc);
     printf("Enter element to be inserted :\n");
     scanf("%d",&num);
-    for (i=size-1 ; i>=loc ; i--)
+    for (i=4-1;i>=loc; i--)
     {
-        array[i+1]=array[i];
+        a[i+1]=a[i];
     }
-    array[loc]=num;
-    size++;
+    a[loc]=num;
     printf("Updated Array :\n");
-    for(i=0 ; i<size ; i++)
+    for(i=0;i<4;i++)
      {
-         printf("%d",array[i]);
+         printf("%d",a[i]);
      }
-        printf("\n");
+       
 }
